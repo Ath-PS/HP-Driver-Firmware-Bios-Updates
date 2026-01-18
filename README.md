@@ -12,6 +12,8 @@ This is using PSADT 4.1.5 which no longer requires serviceui.exe to be interacti
 Commandline for install is:
 Invoke-AppDeployToolkit.exe Install Interactive
 
+If you change "$HPImageAssistantArguments = "/Operation:Analyze /Action:Install" to be  /Action:Download you can send out a precache version of the app so all devices cache all drivers ready for the install later when you send out the install version. Saves alot of time for first runs. You just need to comment out the line towards the end "Remove-ADTFolder -Path $SoftpaqDownloadPath"
+
 
 <img width="725" height="417" alt="image" src="https://github.com/user-attachments/assets/b891497c-6a94-43c2-85da-1d38c6629440" />
 
